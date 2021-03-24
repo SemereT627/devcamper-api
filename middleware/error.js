@@ -28,13 +28,6 @@ const errorHandler = (err, req, res, next) => {
         error = new ErrorResponse(message,400);
     }
 
-
-
-
-
-
-
-
     res.status(error.statusCode || 500).send({
         success: false,
         error: error.message || 'Server Error'
